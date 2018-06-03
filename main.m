@@ -37,6 +37,10 @@
 {
 	IsThisTrue = var;
 }
+-(void)ShowString
+{
+	printf("%s",[String UTF8String]);
+}
 @end
 
 int main(int argc, char **argv)
@@ -50,6 +54,10 @@ int main(int argc, char **argv)
 	NSLog(@"%d",[simple IsSet]);
 	[simple setIsThisTrue:YES];
 	NSLog(@"%d",[simple IsSet]);
+	simple->IsThisTrue = NO;
+	NSLog(@"%d",[simple IsSet]);
+	simple->String = @"aaaale string!\n";
+	[simple ShowString];
 	
 	[pool drain];
 	
