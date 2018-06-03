@@ -24,13 +24,7 @@
 
 #include "class.h"
 
-@implementation SimpleOne: NSObject {
-	
-@public 
-BOOL IsThisTrue;
-NSString *String;
-	
-}
+@implementation SimpleOne: NSObject {}
 -(BOOL)IsSet
 {
 	return IsThisTrue;
